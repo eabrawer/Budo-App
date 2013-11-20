@@ -6,6 +6,7 @@ class CreateGoals < ActiveRecord::Migration
       t.string :martial_art
       t.integer :cost
       t.string :duration
+      t.belongs_to :user
       t.timestamps
     end
   end

@@ -1,0 +1,6 @@
+<h1>Goal show page</h1>
+<p><%= @goal.title %></p>
+<p><%= "I want to learn " + @goal.martial_art + " because " + @goal.description + " I will be training for " + @goal.duration + " and it will cost " + @goal.cost.to_s + " dollars." %></p>
+<br />
+<%= link_to "Back to index", goals_url %>
+

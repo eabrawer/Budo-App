@@ -1,0 +1,13 @@
+<%= form_for @goal do |form| %>
+   <%= form.text_field :title, :placeholder => 'Enter title' %><br />
+ 
+   <%= form.text_field :martial_art, :placeholder => 'Enter your martial art' %><br />
+ 
+   <%= form.number_field :cost, :placeholder => 'Enter the cost of your training' %><br />
+ 
+   <%= form.text_field :duration, :placeholder => 'Enter the duration of your training' %><br />
+ 
+   <%= form.text_area :description, :placeholder => 'Why do you want to learn martial arts' %><br />
+ 
+   <%= form.submit "save" %>
+<% end %>

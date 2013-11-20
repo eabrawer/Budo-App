@@ -9,7 +9,6 @@ class User < ActiveRecord::Base
 	  # t.string :password_digest
    #    t.timestamps
 
-
 	validates :name, presence: true
 	validates :province, presence: true
 	validates :city, presence: true
@@ -25,5 +24,6 @@ class User < ActiveRecord::Base
 	validates :email, presence: true, uniqueness: true, 
 	:format => { :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
 
+	has_one :goal
 
 end

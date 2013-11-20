@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20131118063141) do
     t.string   "martial_art"
     t.integer  "cost"
     t.string   "duration"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

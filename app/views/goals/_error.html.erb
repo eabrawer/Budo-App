@@ -1,0 +1,8 @@
+<% if @goal.errors.any? %>
+	<%= pluralize(@goal.errors.count, "error") %>    prohibited this form from being saved
+	<ul>
+	<% @goal.errors.full_messages.each do |msg| %>
+		<li><%= msg %></li>
+	<% end %>
+	</ul>
+<% end %>

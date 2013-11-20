@@ -7,12 +7,13 @@ class Goal < ActiveRecord::Base
 
       validates :title, presence: true
       validates :description, presence: true 
-      validates :martial_arts, presence: true 
+      validates :martial_art, presence: true 
       validates :duration, presence: true 
 
       validates :cost, presence: true, numericality: 
       { only_integeter: true }
 
+      belongs_to :user
       # has_one :school
    	  # has_many :pledges, through: :users
 end

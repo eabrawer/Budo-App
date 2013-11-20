@@ -1,0 +1,22 @@
+<h1>Goals index</h1>
+
+<table>
+    <tr>
+    	<th>Title</th>
+        <th>Cost</th>
+    </tr>
+
+<% @goals.each do |goal| %>
+  	<tr>
+	    <td><%= goal.title %></td>
+	    <td><%= goal.cost %></td>
+	<% if current_user %>
+	    <td><%= link_to 'Show', goal %></td>
+	    <td><%= link_to 'Edit', edit_goal_path(goal) %></td>
+	    <td><%= link_to "Delete", goal, :confirm => "Are you sure you want to delete this goal?", :method => :delete %></td>
+	<% end %>
+	</tr>
+ <% end %>
+
+ </table>
+ 
