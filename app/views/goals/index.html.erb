@@ -12,8 +12,10 @@
 	    <td><%= goal.cost %></td>
 	<% if current_user %>
 	    <td><%= link_to 'Show', goal %></td>
+	 <% if current_user == goal.user %>  
 	    <td><%= link_to 'Edit', edit_goal_path(goal) %></td>
 	    <td><%= link_to "Delete", goal, :confirm => "Are you sure you want to delete this goal?", :method => :delete %></td>
+	   <% end %>
 	<% end %>
 	</tr>
  <% end %>

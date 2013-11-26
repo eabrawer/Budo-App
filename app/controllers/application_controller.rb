@@ -15,5 +15,16 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
 
+  def signed_in?
+    if !current_user
+      redirect_to users_url
+    end
+  end
+
+    def correct_user
+    if current_user != @goal.user
+      redirect_to users_url
+    end
+  end
 
 end
